@@ -26,9 +26,19 @@ jobs:
       - run: npm test -- --coverage
         env:
           CI: true
+      - name: Upload coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage
+          path: coverage
       - name: Build project
         if: github.event_name == 'push'
         run: npm run build
+      - name: Upload build
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
       - name: Deploy to staging
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain https://straight-sea.surge.sh/
