@@ -54,13 +54,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to staging
-        if: github.event_name == 'push' && github.ref == refs/heads/develop
+        if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
         run: npx surge --project ./build --domain https://straight-sea.surge.sh/
       - name: Deploy to production
-        if: github.event_name == 'push' && github.ref == refs/heads/master
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx surge --project ./build --domain cowardly-fish.surge.sh
       - name: Upload coverage report
-        if: github.event_name == 'push' && github.ref == refs/heads/master
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx codecov
         env: 
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
