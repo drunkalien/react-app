@@ -63,4 +63,4 @@ jobs:
         if: github.event_name == 'push' && github.ref == refs/heads/develop
         run: npx codecov
         env: 
-          ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
