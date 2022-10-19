@@ -21,7 +21,7 @@ jobs:
           CI: true
       - name: Build project
         if: github.event_name == 'push'
-        run: npm build
+        run: npm run build
       - name: Deploy to staging
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain https://straight-sea.surge.sh/
