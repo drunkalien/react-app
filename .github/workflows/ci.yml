@@ -60,7 +60,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == refs/heads/master
         run: npx surge --project ./build --domain cowardly-fish.surge.sh
       - name: Upload coverage report
-        if: github.event_name == 'push' && github.ref == refs/heads/develop
+        if: github.event_name == 'push' && github.ref == refs/heads/master
         run: npx codecov
         env: 
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
