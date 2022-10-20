@@ -1,0 +1,20 @@
+name: Open github issue
+author: drunkalien
+description: 'Opens a github issue'
+inputs: 
+  token:
+    description: 'Github token'
+    required: true
+  title:
+    description: 'Issue title'
+    required: true
+  body: 
+    description: 'Issue body'
+  assignees: 
+    description: 'Issue assignees'
+outputs:
+  issue:
+    description: 'The issue object as a string'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
