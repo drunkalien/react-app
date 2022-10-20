@@ -7418,7 +7418,7 @@ try {
   });
 
   response.then((res) => {
-    core.setOutput(JSON.stringify(res.data));
+    core.setOutput('issue', JSON.stringify(res.data));
   });
 } catch (error) {
   core.setFailed(error.message);
