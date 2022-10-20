@@ -11,6 +11,5 @@ try {
 
   console.log(JSON.stringify(github, null, '\t'));
 } catch (error) {
-  console.log(error.message);
-  // core.setFailed(error.message);
+  core.setFailed(error.message);
 }
