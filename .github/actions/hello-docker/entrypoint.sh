@@ -12,4 +12,5 @@ echo "something"
 echo "something"
 echo "something"
 echo "::endgroup::"
+
 echo "::set-env name=HELLO::hello"
