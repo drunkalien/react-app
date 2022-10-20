@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 try {
   const token = core.getInput('token');
-  const title = core.getInput('title ');
+  const title = core.getInput('title');
   const body = core.getInput('body');
   const assignees = core.getInput('assignees');
 
