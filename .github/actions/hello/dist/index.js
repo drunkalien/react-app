@@ -2019,7 +2019,8 @@ try {
 
   console.log(JSON.stringify(_actions_github__WEBPACK_IMPORTED_MODULE_1___default.a, null, '\t'));
 } catch (error) {
-  _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setFailed(error.message);
+  console.log(error.message);
+  // core.setFailed(error.message);
 }
 
 
