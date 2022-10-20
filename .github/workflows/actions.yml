@@ -14,7 +14,7 @@ jobs:
           assignees: |
             drunkalien
             drunkalien2
-      - run: echo ${{ stesps.issue.outputs.issue }}
+      - run: echo ${{ steps.issue.outputs.issue }}
       - uses: ./.github/actions/hello
         id: hello
         with:
