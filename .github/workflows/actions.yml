@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: drunkalien/open-isuue
+      - uses: drunkalien/open-isuue@v1
         id: issue
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
